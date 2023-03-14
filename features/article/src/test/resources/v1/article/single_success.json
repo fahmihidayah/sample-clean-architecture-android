@@ -1,0 +1,24 @@
+{
+  "message": "Success Request",
+  "error": false,
+  "code": 200,
+  "details": {
+    "pk": 10,
+    "title": "New MIT Campus",
+    "image": "http://127.0.0.1:8002/media/article/MIT_campus.jpg",
+    "content": "New MIT campus",
+    "is_publish": true,
+    "author": {
+      "username": "fahmi",
+      "email": "fahmi@admin.com",
+      "first_name": ""
+    },
+    "favorite": 0,
+    "is_featured": true,
+    "categories": [
+      3
+    ],
+    "created_at": "2023-01-26 04:40:17",
+    "updated_at": "2023-01-26 04:40:57"
+  }
+}

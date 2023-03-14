@@ -1,0 +1,25 @@
+{
+  "message": "Success Request",
+  "error": false,
+  "code": 200,
+  "details": [
+    {
+      "pk": 2,
+      "image": "http://127.0.0.1:8002/media/category/mosque.png",
+      "name": "Mosque",
+      "description": "Article about mosque"
+    },
+    {
+      "pk": 3,
+      "image": "http://127.0.0.1:8002/media/category/education.png",
+      "name": "University",
+      "description": "Article about univesity"
+    },
+    {
+      "pk": 4,
+      "image": "http://127.0.0.1:8002/media/category/office-building.png",
+      "name": "Building",
+      "description": "Article About Office Building"
+    }
+  ]
+}

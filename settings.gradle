@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "BaseApplication"
+include ':app'
+include ':base:core'
+include ':base:ui'
+include ':features:article'
+include ':features:intro'
+include ':uiApp'
+include ':features:user'

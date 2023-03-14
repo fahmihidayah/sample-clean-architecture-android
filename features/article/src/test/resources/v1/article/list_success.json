@@ -1,0 +1,159 @@
+{
+  "message": "Success Request",
+  "error": false,
+  "code": 200,
+  "details": [
+    {
+      "pk": 3,
+      "title": "Al Habra The Great Palace",
+      "image": "http://127.0.0.1:8002/media/article/2b7fd7f9-d68c-4f05-8d93-b1ae83e57894_169.jpg",
+      "content": "The Al hambra is a great palace from Abbashia Kingdom.",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        2
+      ],
+      "created_at": "2023-01-26 04:26:31",
+      "updated_at": "2023-01-26 04:26:31"
+    },
+    {
+      "pk": 4,
+      "title": "Hagia Sophia Mosque from Turkiye",
+      "image": "http://127.0.0.1:8002/media/article/4269909282.jpg",
+      "content": "Hagia Sophia was declared as mosque since Sulthan Muhammad Al Fatih conquer Konstantine at 1453 Hijriyah.",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        2
+      ],
+      "created_at": "2023-01-26 04:28:16",
+      "updated_at": "2023-01-26 04:28:16"
+    },
+    {
+      "pk": 5,
+      "title": "Apple Park Office, An Office for Inventor",
+      "image": "http://127.0.0.1:8002/media/article/apple-campus.jpg.webp",
+      "content": "The Apple Park, is the one of the biggest office at America was launched new Apple Chip, it's Apple M1 and M2.",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        4
+      ],
+      "created_at": "2023-01-26 04:30:59",
+      "updated_at": "2023-01-26 04:30:59"
+    },
+    {
+      "pk": 6,
+      "title": "Google Bay Area Office",
+      "image": "http://127.0.0.1:8002/media/article/Google_BayView.jpg",
+      "content": "New office announced by google. Google Bay area will be the one of many office that allow the employee go fitness and gym for free.",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        4
+      ],
+      "created_at": "2023-01-26 04:33:06",
+      "updated_at": "2023-01-26 04:33:06"
+    },
+    {
+      "pk": 7,
+      "title": "Google office already open for new Developer",
+      "image": "http://127.0.0.1:8002/media/article/google_head_quarter_new.jpg",
+      "content": "A great news come from google office. Today, google will open their office to facilitate developers to use some of their new technology, including the new hardware that invented by google recently.",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        4
+      ],
+      "created_at": "2023-01-26 04:36:04",
+      "updated_at": "2023-01-26 04:36:04"
+    },
+    {
+      "pk": 8,
+      "title": "Netflix trying to expand their technology with build a new building.",
+      "image": "http://127.0.0.1:8002/media/article/netflx_building.jpg",
+      "content": "A netflix text",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        4
+      ],
+      "created_at": "2023-01-26 04:37:46",
+      "updated_at": "2023-01-26 04:37:46"
+    },
+    {
+      "pk": 9,
+      "title": "Microsoft new office come up with new design",
+      "image": "http://127.0.0.1:8002/media/article/microsoft_building.jpg",
+      "content": "new design was attracted all architect",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": false,
+      "categories": [
+        4
+      ],
+      "created_at": "2023-01-26 04:39:56",
+      "updated_at": "2023-01-26 04:39:56"
+    },
+    {
+      "pk": 10,
+      "title": "New MIT Campus",
+      "image": "http://127.0.0.1:8002/media/article/MIT_campus.jpg",
+      "content": "New MIT campus",
+      "is_publish": true,
+      "author": {
+        "username": "fahmi",
+        "email": "fahmi@admin.com",
+        "first_name": ""
+      },
+      "favorite": 0,
+      "is_featured": true,
+      "categories": [
+        3
+      ],
+      "created_at": "2023-01-26 04:40:17",
+      "updated_at": "2023-01-26 04:40:57"
+    }
+  ]
+}

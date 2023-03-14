@@ -1,0 +1,6 @@
+{
+  "message": "Failure Request",
+  "error": true,
+  "code": 404,
+  "details": null
+}
