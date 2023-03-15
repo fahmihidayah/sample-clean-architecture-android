@@ -1,0 +1,6 @@
+{
+  "message": "Bad Request",
+  "error": true,
+  "code": 400,
+  "details": null
+}

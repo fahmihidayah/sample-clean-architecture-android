@@ -1,0 +1,11 @@
+{
+  "message": "Success Request",
+  "error": false,
+  "code": 200,
+  "details": {
+    "username": "fahmi",
+    "email": "fahmi@admin.com",
+    "first_name": "",
+    "token": "88dfb2695c7aa46064031fb2141e39586d59fe0e"
+  }
+}
