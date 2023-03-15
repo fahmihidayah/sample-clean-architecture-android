@@ -10,6 +10,11 @@ import com.widsons.ui.adapter.BaseViewHolder
 
 class CategoryAdapter(items: List<Category> = listOf()) :
     BaseAdapter<CategoryAdapter.CategoryViewHolder, Category>(items) {
+
+    var onClickItemListener : (Category) -> Unit = {
+
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         return CategoryViewHolder(
             CategoryViewHolderBinding.inflate(
@@ -32,6 +37,7 @@ class CategoryAdapter(items: List<Category> = listOf()) :
                     }
                     selectedIndex = position
                     notifyItemChanged(selectedIndex)
+                    onClickItemListener.invoke(item)
                 }
             }
         }

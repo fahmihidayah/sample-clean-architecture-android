@@ -21,7 +21,11 @@ class HomeFragment : BaseViewModelFragment<HomeViewModel>() {
     override val viewModel: HomeViewModel by viewModels()
 
     var homeAdapter : HomeAdapter = HomeAdapter()
-    var categoryAdapter : CategoryAdapter = CategoryAdapter()
+    var categoryAdapter : CategoryAdapter = CategoryAdapter().apply {
+        onClickItemListener = {
+            viewModel.loadArticleByCategory(it)
+        }
+    }
     lateinit var binding : HomeFragmentBinding
 
     override fun onCreateView(
@@ -47,8 +51,8 @@ class HomeFragment : BaseViewModelFragment<HomeViewModel>() {
 
                     }
                     is UIState.Success -> {
-                        homeAdapter = HomeAdapter(it.data?.articles?: listOf())
-                        categoryAdapter = CategoryAdapter(it.data?.categories?: listOf())
+                        homeAdapter.updateWhenChange(it.data?.articles?: listOf())
+                        categoryAdapter.updateWhenChange(it.data?.categories?: listOf())
                         binding.articleAdapter = homeAdapter
                         binding.categoryAdapter = categoryAdapter
                     }

@@ -15,9 +15,10 @@
 
         <TextView
 
+            tools:background="@drawable/square_active"
             android:padding="10dp"
             android:background="@{isSelected ? @drawable/square_active:@drawable/square_inactive }"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="17dp"
             android:layout_margin="10dp"
             android:id="@+id/textViewCategory"

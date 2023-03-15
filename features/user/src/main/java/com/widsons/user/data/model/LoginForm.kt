@@ -1,6 +1,6 @@
 package com.widsons.user.data.model
 
-class UserForm(
+class LoginForm(
     var username : String = "",
     var password : String = ""
 )

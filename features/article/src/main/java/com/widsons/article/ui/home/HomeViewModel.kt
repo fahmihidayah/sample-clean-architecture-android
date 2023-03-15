@@ -2,6 +2,8 @@ package com.widsons.article.ui.home
 
 import androidx.lifecycle.viewModelScope
 import com.widsons.article.data.model.Article
+import com.widsons.article.data.model.ArticleQuery
+import com.widsons.article.data.model.Category
 import com.widsons.article.domain.model.ArticlesCategories
 import com.widsons.article.domain.usecase.LoadArticleUseCaseImpl
 import com.widsons.article.domain.usecase.LoadCategoryUseCase
@@ -9,10 +11,7 @@ import com.widsons.article.domain.usecase.LoadCategoryUseCaseImpl
 import com.widsons.core.state.UIState
 import com.widsons.ui.viewmodel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.zip
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -36,10 +35,23 @@ class HomeViewModel @Inject constructor(
                         categories = categories
                     )
                 }
-                .catch {
-                    _listArticleStateFlow.value = UIState.Error("Ops got an exception")
+                .catch { ex ->
+                    _listArticleStateFlow.value = UIState.Error(ex.message)
                 }.collect {
                     _listArticleStateFlow.value = UIState.Success(it)
+                }
+        }
+    }
+
+    fun loadArticleByCategory(category: Category) {
+        viewModelScope.launch {
+            loadArticleUseCase.invoke(params = ArticleQuery(categoryId = category.pk?.toString()))
+                .catch {
+                    _listArticleStateFlow.value = UIState.Error(it.message)
+                }.collect {
+                    _listArticleStateFlow.value = UIState.Success(_listArticleStateFlow.value.data?.copy(
+                        articles = it
+                    ))
                 }
         }
     }

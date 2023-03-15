@@ -3,6 +3,7 @@ package com.widsons.article.data.api
 import com.widsons.article.data.model.Article
 import com.widsons.core.data.model.BaseResponse
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -16,4 +17,7 @@ interface ArticleAPI {
 
     @GET("article/{id}")
     suspend fun getArticleDetail(@Path("id") id : String) : BaseResponse<Article>
+
+    @POST("article/favourite/{id}")
+    suspend fun favouriteArticle(@Path("id") id : String) : BaseResponse<Article>
 }

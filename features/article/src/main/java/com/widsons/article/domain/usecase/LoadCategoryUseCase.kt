@@ -21,5 +21,7 @@ class LoadCategoryUseCaseImpl @Inject constructor(
         if(it.error) {
             throw Exception(it.message)
         }
-    }.map { it.details }
+    }.map { it.details.toMutableList().apply {
+        add(0, Category(pk = null, name = "All"))
+    } }
 }

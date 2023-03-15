@@ -3,8 +3,7 @@ package com.widsons.user.data.remote
 import com.widsons.core.data.model.BaseResponse
 import com.widsons.core.utils.JsonProvider
 import com.widsons.user.data.model.User
-import com.widsons.user.data.model.UserForm
-import com.widsons.user.data.remote.UserApi
+import com.widsons.user.data.model.LoginForm
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -16,7 +15,6 @@ import org.junit.runner.RunWith
 import org.mockito.junit.MockitoJUnitRunner
 import org.mockito.kotlin.given
 import org.mockito.kotlin.mock
-import org.mockito.kotlin.willAnswer
 import org.mockito.kotlin.willReturn
 
 @ExperimentalCoroutinesApi
@@ -25,7 +23,7 @@ class UserApiTest {
 
     val userApi : UserApi = mock()
 
-    val userForm : UserForm = UserForm(
+    val userForm : LoginForm = LoginForm(
         username = "fahmi",
         password = "123456789"
     )

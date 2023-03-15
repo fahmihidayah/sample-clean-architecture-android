@@ -2,7 +2,7 @@ package com.widsons.user.data.remote
 
 import com.widsons.core.data.model.BaseResponse
 import com.widsons.user.data.model.User
-import com.widsons.user.data.model.UserForm
+import com.widsons.user.data.model.LoginForm
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -10,7 +10,7 @@ import retrofit2.http.POST
 interface UserApi {
     @POST("login")
     suspend fun login(
-        @Body userForm: UserForm
+        @Body userForm: LoginForm
     ): BaseResponse<User>
 
     @POST("register")
