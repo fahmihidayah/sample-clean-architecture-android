@@ -17,6 +17,7 @@
         android:layout_height="match_parent">
 
         <com.widsons.uiapp.view.CustomizeTextInputLayout
+
             style="@style/DefaultCustomizeTextInputLayout"
             android:layout_marginTop="30dp"
             android:layout_marginStart="20dp"
@@ -45,6 +46,7 @@
 
         <com.widsons.uiapp.view.CustomizeTextInputLayout
 
+            style="@style/DefaultCustomizeTextInputLayout"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
@@ -76,16 +78,40 @@
             android:onClick="@{() -> loginAction.onClickLogin()}"
             android:id="@+id/buttonLogin"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/button_height"
             android:text="Login"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
             app:layout_constraintStart_toStartOf="@+id/textInputLayoutPassword"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Don\'t have an account?"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
+            app:layout_constraintHorizontal_bias="0.30"
+            app:layout_constraintStart_toStartOf="@+id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
         <include
             android:id="@+id/loadingLayout"
             tools:visibility="gone"
             layout="@layout/loading_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+        <TextView
+            android:onClick="@{()->loginAction.onClickRegister()}"
+            android:textColor="@color/blue_dark"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:id="@+id/textViewRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

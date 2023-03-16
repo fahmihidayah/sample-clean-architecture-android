@@ -69,6 +69,8 @@
     </style>
 
     <style name="DefaultCustomizeTextInputLayout">
+        <item name="ctl_label_size">@dimen/_12sdp</item>
+        <item name="ctl_error_size">@dimen/_12sdp</item>
 <!--        <item name="ctl_error_color">@color/red_edit_text_error</item>-->
 
     </style>
@@ -80,6 +82,7 @@
     </style>
 
     <style name="DefaultTextInputLayout.Password">
+
         <item name="endIconCheckable">true</item>
         <item name="endIconMode">password_toggle</item>
 <!--        <item name="endIconDrawable">@drawable/icon_password_selector</item>-->

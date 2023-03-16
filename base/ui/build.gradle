@@ -39,6 +39,7 @@ dependencies {
     implementation libraries.architecture
     implementation libraries.navigation
     implementation libraries.size
+    implementation project(":base:core")
 
     implementation libraries.dependencyInjection
     kapt libraries.kaptDependencyInjection
@@ -46,7 +47,6 @@ dependencies {
     kaptTest libraries.kaptTestDependencyInjection
     androidTestImplementation libraries.androidTestImplementationDependencyInjection
     kaptAndroidTest libraries.kaptAndroidTestDependencyInjection
-
     implementation libraries.retrofit
 
     testImplementation libraries.testImplementationTest

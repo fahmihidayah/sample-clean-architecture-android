@@ -5,6 +5,8 @@ import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import com.widsons.core.state.UIState
+import com.widsons.ui.utils.toast
 
 abstract class BaseFragment: Fragment() {
 
@@ -51,8 +53,24 @@ abstract class BaseFragment: Fragment() {
         getBaseActivity().supportActionBar?.setTitle(title)
     }
 
-
-
+    fun processUiState(uiState: UIState<*>, onFailure : () -> Unit = {}, onSuccess : () -> Unit = {}) {
+        when(uiState) {
+            is UIState.Error -> {
+                hideLoading()
+                onFailure()
+            }
+            is UIState.Loading -> {
+                showLoading()
+            }
+            is UIState.Success -> {
+                hideLoading()
+                onSuccess()
+            }
+            else -> {
+                hideLoading()
+            }
+        }
+    }
 
 
 }

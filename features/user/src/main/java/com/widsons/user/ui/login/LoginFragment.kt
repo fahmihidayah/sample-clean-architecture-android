@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.widsons.core.state.UIState
 import com.widsons.ui.base.BaseFragment
 import com.widsons.ui.base.BaseViewModelFragment
@@ -31,7 +32,7 @@ class LoginFragment : BaseViewModelFragment<LoginViewModel>(), LoginAction{
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
+        binding = LoginFragmentBinding.inflate(inflater)
         setToolbarTitle("Login")
         return binding.root
     }
@@ -42,22 +43,11 @@ class LoginFragment : BaseViewModelFragment<LoginViewModel>(), LoginAction{
         binding.loginAction = this
         lifecycleScope.launch {
             viewModel.loginStateFlow.collect {
-                when(it) {
-                    is UIState.Error -> {
-                        hideLoading()
-                        toast(it.error?:"")
-                    }
-                    is UIState.Loading -> {
-                        showLoading()
-                    }
-                    is UIState.Success -> {
-                        hideLoading()
-                        toast("success login")
-                    }
-                    else -> {
-                        hideLoading()
-                    }
-                }
+                processUiState(it, onFailure = {
+                    toast(it.error?:"")
+                }, onSuccess = {
+                    toast("user is ${it.data?.email}")
+                })
             }
         }
         validationListener = viewModel.loginForm.initialValidationListener(binding.root as ViewGroup)
@@ -79,7 +69,9 @@ class LoginFragment : BaseViewModelFragment<LoginViewModel>(), LoginAction{
     }
 
     override fun onClickRegister() {
-
+        findNavController().navigate(
+            R.id.action_loginFragment_to_registerFragment
+        )
     }
 
 }
