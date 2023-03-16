@@ -53,6 +53,7 @@ dependencies {
     implementation project(":base:ui")
     implementation project(":features:article")
     implementation project(':features:intro')
+    implementation project(':features:user')
     implementation project(':uiApp')
 
     testImplementation 'junit:junit:4.13.2'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomizeTextInputLayout">
+        <attr name="ctl_label" format="string"/>
+        <attr name="ctl_label_size" format="reference"/>
+        <attr name="ctl_label_color" format="reference"/>
+        <attr name="ctl_error" format="string"/>
+        <attr name="ctl_error_size" format="reference"/>
+        <attr name="ctl_error_color" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="CustomToolbar">
+        <attr name="ctb_title" format="string"/>
+        <attr name="ctb_action" format="enum">
+            <enum name="back" value="0"/>
+        </attr>
+    </declare-styleable>
+</resources>

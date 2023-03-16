@@ -8,9 +8,10 @@ abstract class BaseAdapter<VH : BaseViewHolder, I>(
     var items : List<I> = initialItems
 
 
-    fun updateWhenChange(items : List<I>) {
+    fun updateWhenChange(items : List<I>, callback : () -> Unit = {}) {
         if(items.size != this.items.size) {
             updateItems(items)
+            callback()
         }
     }
 

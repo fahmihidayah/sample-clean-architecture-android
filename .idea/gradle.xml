@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/features/article" />
             <option value="$PROJECT_DIR$/features/intro" />
             <option value="$PROJECT_DIR$/features/user" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/validator" />
             <option value="$PROJECT_DIR$/uiApp" />
           </set>
         </option>

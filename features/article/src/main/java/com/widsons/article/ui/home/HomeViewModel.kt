@@ -21,25 +21,34 @@ class HomeViewModel @Inject constructor(
     val loadCategoryUseCase: LoadCategoryUseCaseImpl
 ) : BaseViewModel() {
 
-    private val _listArticleStateFlow: MutableStateFlow<UIState<ArticlesCategories>> =
+    private val _listArticleStateFlow: MutableStateFlow<UIState<List<Article>>> =
         MutableStateFlow(UIState.Loading())
-    val listArticleStateFlow: StateFlow<UIState<ArticlesCategories>> = _listArticleStateFlow
+    val listArticleStateFlow: StateFlow<UIState<List<Article>>> = _listArticleStateFlow
+
+
+    private val _listCategoryStateFlow: MutableStateFlow<UIState<List<Category>>> =
+        MutableStateFlow(UIState.Loading())
+    val listCategoryStateFlow: StateFlow<UIState<List<Category>>> = _listCategoryStateFlow
+
+    val articleCategory = ArticlesCategories(
+        articles = listOf(),
+        categories = listOf()
+    )
 
     fun initialLoadArticle() {
         viewModelScope.launch {
             loadArticleUseCase
                 .invoke(null)
-                .zip(loadCategoryUseCase.invoke()) { articles, categories ->
-                    ArticlesCategories(
-                        articles = articles,
-                        categories = categories
-                    )
-                }
                 .catch { ex ->
                     _listArticleStateFlow.value = UIState.Error(ex.message)
                 }.collect {
                     _listArticleStateFlow.value = UIState.Success(it)
                 }
+            loadCategoryUseCase.invoke().catch {
+                _listCategoryStateFlow.value = UIState.Error(it.message)
+            }.collect {
+                _listCategoryStateFlow.value = UIState.Success(it)
+            }
         }
     }
 
@@ -48,10 +57,10 @@ class HomeViewModel @Inject constructor(
             loadArticleUseCase.invoke(params = ArticleQuery(categoryId = category.pk?.toString()))
                 .catch {
                     _listArticleStateFlow.value = UIState.Error(it.message)
+                }.onCompletion {
+
                 }.collect {
-                    _listArticleStateFlow.value = UIState.Success(_listArticleStateFlow.value.data?.copy(
-                        articles = it
-                    ))
+                    _listArticleStateFlow.value = UIState.Success(it)
                 }
         }
     }

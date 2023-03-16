@@ -30,7 +30,6 @@ constructor(
     var loginForm : LoginForm = LoginForm()
 
     fun login() {
-
         viewModelScope.launch {
             _loginSateFlow.value = UIState.Loading()
             loginUseCase.invoke(loginForm).catch { e ->
@@ -39,7 +38,6 @@ constructor(
                 _loginSateFlow.value = UIState.Success(it.details)
             }
         }
-
     }
 
 }

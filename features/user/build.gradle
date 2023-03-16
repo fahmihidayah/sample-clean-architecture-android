@@ -65,4 +65,5 @@ dependencies {
     implementation project(":base:core")
     implementation project(":base:ui")
     implementation project(":uiApp")
+    implementation project(":libraries:validator")
 }

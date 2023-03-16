@@ -62,6 +62,7 @@ dependencies {
 
     implementation project(":base:core")
     implementation project(":base:ui")
+    implementation project(":uiApp")
 
     testImplementation libraries.testImplementationTest
     testImplementation libraries.testCoroutine

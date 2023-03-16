@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -42,19 +43,40 @@ class HomeFragment : BaseViewModelFragment<HomeViewModel>() {
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launch {
+            viewModel.listCategoryStateFlow.collect {
+                when (it) {
+                    is UIState.Loading -> {
+
+                    }
+                    is UIState.Success -> {
+                        categoryAdapter.updateWhenChange(it.data?: listOf()) {
+                            binding.categoryAdapter = categoryAdapter
+                        }
+                    }
+                    is UIState.Error -> {
+
+                    }
+                }
+
+            }
+
+        }
+
+        lifecycleScope.launch {
+
             viewModel.listArticleStateFlow.collect {
                 when (it) {
                     is UIState.Loading -> {
 
                     }
                     is UIState.Error -> {
-
+                        showError(message = it.error)
                     }
                     is UIState.Success -> {
-                        homeAdapter.updateWhenChange(it.data?.articles?: listOf())
-                        categoryAdapter.updateWhenChange(it.data?.categories?: listOf())
-                        binding.articleAdapter = homeAdapter
-                        binding.categoryAdapter = categoryAdapter
+                        hideError()
+                        homeAdapter.updateWhenChange(it.data?: listOf()) {
+                            binding.articleAdapter = homeAdapter
+                        }
                     }
                     else -> {
 
@@ -67,4 +89,9 @@ class HomeFragment : BaseViewModelFragment<HomeViewModel>() {
     }
 
 
+    override fun getErrorView(): View = binding.emptyLayout.root
+
+    override fun getContentView(): View = binding.recyclerViewNews
+
+    override fun getErrorText(): TextView = binding.emptyLayout.textViewEmpty
 }

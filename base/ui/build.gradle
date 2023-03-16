@@ -38,6 +38,7 @@ dependencies {
     implementation libraries.coroutine
     implementation libraries.architecture
     implementation libraries.navigation
+    implementation libraries.size
 
     implementation libraries.dependencyInjection
     kapt libraries.kaptDependencyInjection

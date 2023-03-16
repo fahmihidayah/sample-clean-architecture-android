@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DefaultOutlineButton" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/_7sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+    <style name="DefaultOutlineButton.Italic">
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="DefaultSolidButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="cornerRadius">@dimen/_7sdp</item>
+<!--        <item name="rippleColor">@color/grey_light_background</item>-->
+<!--        <item name="backgroundTint">@color/default_button_color</item>-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+<!--        <item name="android:fontFamily">@font/sf_compact_text_regular</item>-->
+    </style>
+    <style name="DefaultSolidButton.Italic">
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="DefaultEditText" parent="android:Widget.EditText">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+<!--        <item name="android:fontFamily">@font/sf_compact_display_regular</item>-->
+    </style>
+
+
+    <style name="DefaultOptionView" >
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:paddingStart">@dimen/_13sdp</item>
+        <item name="android:paddingEnd">@dimen/_13sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+<!--        <item name="android:fontFamily">@font/sf_compact_display_regular</item>-->
+    </style>
+    <style name="TextViewDefault" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+<!--        <item name="android:fontFamily">@font/sf_compact_text_light</item>-->
+    </style>
+    <style name="TextViewDefault.Grey" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/text_medium</item>
+<!--        <item name="android:textColor">@color/grey_edit_text</item>-->
+<!--        <item name="android:fontFamily">@font/sf_compact_display_regular</item>-->
+    </style>
+
+    <style name="TextViewDefault.Bold">
+<!--        <item name="android:fontFamily">@font/sf_compact_display_bold</item>-->
+    </style>
+    <style name="TextViewDefault.Light">
+<!--        <item name="android:fontFamily">@font/sf_compact_text_light</item>-->
+    </style>
+
+    <style name="TextViewDefault.Big">
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+    <style name="TextViewDefault.Big.BoldRegular">
+<!--        <item name="android:fontFamily">@font/sf_compact_display_bold</item>-->
+    </style>
+
+    <style name="TextViewDefault.Big.Bold">
+<!--        <item name="android:fontFamily">@font/sf_compact_display_bold</item>-->
+    </style>
+
+    <style name="DefaultCustomizeTextInputLayout">
+<!--        <item name="ctl_error_color">@color/red_edit_text_error</item>-->
+
+    </style>
+
+    <style name="DefaultTextInputLayout">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="DefaultTextInputLayout.Password">
+        <item name="endIconCheckable">true</item>
+        <item name="endIconMode">password_toggle</item>
+<!--        <item name="endIconDrawable">@drawable/icon_password_selector</item>-->
+    </style>
+</resources>

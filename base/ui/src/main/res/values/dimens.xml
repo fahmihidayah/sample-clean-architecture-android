@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_start_end">@dimen/_19sdp</dimen>
+    <dimen name="margin_start_end_small">@dimen/_10sdp</dimen>
+    <dimen name="margin_top_bottom">@dimen/_10sdp</dimen>
+    <dimen name="margin_top_bottom_big">@dimen/_20sdp</dimen>
+    <dimen name="margin_top_bottom_small">@dimen/_5sdp</dimen>
+    <dimen name="card_corner">@dimen/_10sdp</dimen>
+    <dimen name="button_corner">@dimen/_20sdp</dimen>
+    <dimen name="button_height">@dimen/_45sdp</dimen>
+    <dimen name="button_height_medium">@dimen/_55sdp</dimen>
+    <dimen name="button_width">@dimen/_100sdp</dimen>
+    <dimen name="text_big">@dimen/_25sdp</dimen>
+    <dimen name="text_big_1">@dimen/_25sdp</dimen>
+    <dimen name="text_big_2">@dimen/_35sdp</dimen>
+    <dimen name="text_medium">@dimen/_14sdp</dimen>
+    <dimen name="text_small">@dimen/_11sdp</dimen>
+    <dimen name="toolbar_height">@dimen/_48sdp</dimen>
+    <dimen name="line">1dp</dimen>
+</resources>

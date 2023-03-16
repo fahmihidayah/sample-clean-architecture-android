@@ -6,7 +6,7 @@ ext {
             compileSdk   : 33,
             androidXCoreKtx            : "1.9.0",
             androidXAppcompat          : "1.6.1",
-            materialAndroid            : "1.8.0",
+            materialAndroid            : "1.9.0-alpha02",
             // coroutine
             coroutineAndroid           : "1.6.1",
             // constraint layout
