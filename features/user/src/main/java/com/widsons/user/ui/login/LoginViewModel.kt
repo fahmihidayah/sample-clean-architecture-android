@@ -24,7 +24,7 @@ constructor(
     val loginUseCase: LoginUseCaseImpl
 ) : BaseViewModel() {
 
-    private val _loginSateFlow = MutableStateFlow<UIState<User>>(UIState.Loading())
+    private val _loginSateFlow = MutableStateFlow<UIState<User>>(UIState.Initial())
     val loginStateFlow : StateFlow<UIState<User>> = _loginSateFlow
 
     var loginForm : LoginForm = LoginForm()

@@ -5,6 +5,9 @@
 
     <data>
         <variable
+            name="loginAction"
+            type="com.widsons.user.ui.login.LoginAction" />
+        <variable
             name="loginForm"
             type="com.widsons.user.data.model.LoginForm" />
     </data>
@@ -32,6 +35,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/DefaultEditText"
+                    android:text="@={loginForm.username}"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -61,6 +65,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@={loginForm.password}"
                     style="@style/DefaultEditText"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -68,6 +73,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:layout_marginTop="40dp"
+            android:onClick="@{() -> loginAction.onClickLogin()}"
             android:id="@+id/buttonLogin"
             android:layout_width="0dp"
             android:layout_height="60dp"
@@ -75,5 +81,11 @@
             app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
             app:layout_constraintStart_toStartOf="@+id/textInputLayoutPassword"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+        <include
+            android:id="@+id/loadingLayout"
+            tools:visibility="gone"
+            layout="@layout/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

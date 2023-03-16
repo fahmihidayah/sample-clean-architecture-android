@@ -1,4 +1,8 @@
 package com.widsons.user.ui.profile
 
-class ProfileFragment {
+import com.widsons.ui.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class ProfileFragment : BaseFragment(){
 }

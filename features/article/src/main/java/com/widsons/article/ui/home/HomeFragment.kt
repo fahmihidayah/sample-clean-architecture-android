@@ -56,6 +56,9 @@ class HomeFragment : BaseViewModelFragment<HomeViewModel>() {
                     is UIState.Error -> {
 
                     }
+                    else -> {
+
+                    }
                 }
 
             }
